@@ -27,10 +27,16 @@ scalaVersion := "2.11.8"
 
 libraryDependencies ++= {
     val doobieVersion = "0.2.3"
+    val scalazVersion = "7.1.2"
     Seq(
       "org.tpolecat" %% "doobie-core" % doobieVersion,
       "org.tpolecat" %% "doobie-contrib-hikari" % doobieVersion,
-      "org.tpolecat" %% "doobie-contrib-postgresql" % doobieVersion
+      "org.tpolecat" %% "doobie-contrib-postgresql" % doobieVersion,
+      "org.scalaz" %% "scalaz-core" % scalazVersion,
+      "org.scalaz" %% "scalaz-effect" % scalazVersion,
+      "org.postgresql" % "postgresql" % "9.4.1208.jre7",
+      "org.tpolecat" %% "doobie-contrib-specs2" % doobieVersion % Test,
+      "org.scalatest" %% "scalatest" % "2.2.5" % Test
     )
 }
 
